@@ -1,10 +1,14 @@
 #include <cstdio>
 
-#include <sum.h>
-#include <mul.h>
+#include <static-lib/sum.h>
+#include <shared-lib/sub.h>
+#include <shared-lib/mul.h>
 
 int main() {
-    printf("%d\n", sum(1, 2));
-    printf("%f\n", mul(1, 2));
+    int a = 100;
+    int b = 200;
+    std::printf("sum(%d,%d)=:%d\n", a, b, sum(a, b));
+    std::printf("sub(%d,%d)=%d\n", a, b, sub(a, b));
+    std::printf("mul(%d,%d)=%f\n", a, b, mul((double) a, (double) b));
     return 0;
 }
