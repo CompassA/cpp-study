@@ -1,5 +1,7 @@
 # 下载库
 echo "git submodule update start"
+
+git submodule init
 git submodule update
 
 # 编译
