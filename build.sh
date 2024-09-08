@@ -23,6 +23,7 @@ do
 done
 
 cd $root_path
+mkdir build
 cmake --build /home/dev/code/cpp-study/build --config Debug --target all -j 3 --
 
 cp build/cppstudy cppstudy
