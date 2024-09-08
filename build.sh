@@ -21,10 +21,3 @@ do
     fi
     cd $root_path/third-parties
 done
-
-cd $root_path
-mkdir build
-cmake --build $root_path/build --config Debug --target all -j 3 --
-
-cp $root_path/build/cppstudy $root_path/cppstudy
-./cppstudy
