@@ -1,0 +1,4 @@
+[submodule "third-parties/spdlog"]
+	path = third-parties/spdlog
+	url = git@github.com:gabime/spdlog.git
+	branch = v1.x
