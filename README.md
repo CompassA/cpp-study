@@ -9,7 +9,8 @@ git submodule add -b v1.x --depth=1 git@github.com:gabime/spdlog.git third-parti
 
 # 编译
 cd third-parties/spdlog && mkdir build && cd build
-cmake .. && make -j && make install
+cmake .. && make -j
+sudo make install
 ```
 
 cmake引入  
@@ -25,3 +26,19 @@ endif()
 add_executable(example example.cpp)
 target_link_libraries(example PRIVATE spdlog::spdlog $<$<BOOL:${MINGW}>:ws2_32>)
 ```
+
+## 第三方库 googtest
+
+下载
+```bash
+git submodule add --depth=1 git@github.com:google/googletest.git third-parties/googletest
+cd third-parties/googletest
+git fetch --tags
+git checkout v1.15.2
+
+mkdir build && cd build
+cmake .. && make -j
+sudo make install
+```  
+  
+vscode 安装c++ TestMate插件
